@@ -1,16 +1,5 @@
-import express from 'express';
+import api from './api';
+import config from './api/configs';
 
-const app = express();
-
-// settings
-app.set('port', 3000);
-
-// middleware
-
-
-// routes
-
-// static files
-app.listen(app.get('port'), () => {
-    console.log(`server on port ${app.get('port')}`);
-});
+api.create(config);
+api.start();
