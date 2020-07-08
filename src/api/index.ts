@@ -4,12 +4,13 @@ import routes from './routes';
 const app = express();
 
 function create (config: any) {
+
     app.set('env', config.env);
     app.set('port', config.port);
-
+    
     app.use(express.json());
     app.use(express.urlencoded({extended: false}));
-
+    
     routes.init(app);
 };
 
